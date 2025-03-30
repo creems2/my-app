@@ -1,14 +1,16 @@
 import React from "react";
-import TemperatureConverter from "./TemperatureConverter";
-import TodoList from "./TodoList";
-import { Container } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
 
 function App() {
   return (
-    <Container>
-      <TemperatureConverter />
-      <TodoList />
-    </Container>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
 }
 
